@@ -1,11 +1,25 @@
 html {
   box-sizing: border-box;
+  font-family: "Georgia", serif;
+  line-height: 1.5;
+  background-color: #f2f1ed;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4rem;
+  grid-template-areas:
+    "header header"
+    "figure figure"
 }
 
 img {
@@ -15,4 +29,31 @@ img {
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+}
+
+.logo img {
+  width: 14rem;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #fff;
+  font-family: "Patua One", san-serif;
+  text-decoration: none;
+  font-size: 2rem;
+  list-style-type: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+main h2 {
+  font-family: "Patua One", san-serif;
+  color: #30658d;
 }
