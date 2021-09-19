@@ -3,8 +3,6 @@ html {
   font-family: "Georgia", serif;
   line-height: 1.5;
   background-color: #f2f1ed;
-  margin: 1rem;
-  padding: 1rem;
 }
 
 *,
@@ -14,12 +12,14 @@ html {
 }
 
 body {
+  margin: 1rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4rem;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "header header"
-    "figure figure"
+    "main main"
 }
 
 img {
@@ -32,9 +32,17 @@ header {
 }
 
 .logo img {
+  z-index: 100;
   width: 14rem;
+  grid-column: 1;
+  grid-row: 2;
+  position: absolute;
+}
+
+.pano img {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
+  position: absolute;
 }
 
 nav ul {
@@ -45,6 +53,7 @@ nav ul {
   text-decoration: none;
   font-size: 2rem;
   list-style-type: none;
+  z-index: 100;
 }
 
 main {
@@ -56,4 +65,8 @@ main {
 main h2 {
   font-family: "Patua One", san-serif;
   color: #30658d;
+}
+
+figure {
+  margin: 0;
 }
