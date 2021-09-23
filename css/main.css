@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: "Georgia", serif;
+  font-family: Georgia, serif;
   line-height: 1.5;
   background-color: #f2f1ed;
 }
@@ -39,15 +39,20 @@ header {
   position: absolute;
 }
 
-.pano img {
+.pano {
+  grid-area: header;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   position: absolute;
 }
 
-nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+nav {
+grid-area: banner;
+grid-column: 2;
+}
+
+ul {
+  display: flex;
   color: #fff;
   font-family: "Patua One", san-serif;
   text-decoration: none;
